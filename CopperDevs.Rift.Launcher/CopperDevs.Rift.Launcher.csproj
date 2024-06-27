@@ -10,12 +10,33 @@
 
     <ItemGroup>
       <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+      <PackageReference Include="CopperDevs.Core" Version="1.0.0" />
       <PackageReference Include="WPF-UI" Version="3.0.4" />
       <PackageReference Include="WPF-UI.Tray" Version="3.0.4" />
     </ItemGroup>
 
     <ItemGroup>
       <Page Update="Pages\SettingsPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Views\Pages\SettingsPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="Views\Pages\HomePage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="Views\Pages\AllInstancesPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="Views\Pages\BrowseModpacksPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="Views\Pages\SpecificInstancePage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="Views\Windows\MainWindow.xaml">
         <Generator>MSBuild:Compile</Generator>
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>
