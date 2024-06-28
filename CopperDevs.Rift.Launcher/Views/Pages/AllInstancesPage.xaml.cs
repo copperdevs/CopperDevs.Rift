@@ -1,6 +1,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using CopperDevs.Core;
+using CopperDevs.Rift.Launcher.Managers;
 using CopperDevs.Rift.Launcher.Views.Windows;
 using Button = Wpf.Ui.Controls.Button;
 

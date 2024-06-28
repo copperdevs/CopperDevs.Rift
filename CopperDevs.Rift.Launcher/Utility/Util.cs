@@ -31,22 +31,21 @@ public static class Util
         else
             Log.Error("this is a windows app bruh fuck linux&macos idc about them | actual error: Attempting to run a steam game on a non windows platform, when currently only windows is supported");
     }
-    
+
     public static async Task DownloadFileWithProgressAsync(string url, string destinationPath, Action<int> progressUpdate = null!, Action finishedDownloading = null!)
     {
         using var client = new HttpClient();
         using var response = await client.GetAsync(url, HttpCompletionOption.ResponseHeadersRead);
-        
+
         response.EnsureSuccessStatusCode();
 
         var totalBytes = response.Content.Headers.ContentLength;
 
         await using Stream contentStream = await response.Content.ReadAsStreamAsync(), fileStream = new FileStream(destinationPath, FileMode.Create, FileAccess.Write, FileShare.None, 8192, true);
-        
+
         var buffer = new byte[8192];
         long totalBytesRead = 0;
         var bytesRead = 0;
-        var progressPercentage = 0;
         var lastProgressPercentage = -1;
 
         while ((bytesRead = await contentStream.ReadAsync(buffer)) != 0)
@@ -56,13 +55,13 @@ public static class Util
 
             if (totalBytes.HasValue)
             {
-                progressPercentage = (int)((totalBytesRead * 100) / totalBytes.Value);
-                
-                if (progressPercentage == lastProgressPercentage) 
+                var progressPercentage = (int)((totalBytesRead * 100) / totalBytes.Value);
+
+                if (progressPercentage == lastProgressPercentage)
                     continue;
-                
+
                 Log.Network($"Download progress: {progressPercentage}%");
-                
+
                 progressUpdate?.Invoke(progressPercentage);
                 lastProgressPercentage = progressPercentage;
             }
@@ -71,7 +70,7 @@ public static class Util
                 Log.Network($"Downloaded {totalBytesRead} bytes");
             }
         }
-        
+
         finishedDownloading?.Invoke();
     }
 }

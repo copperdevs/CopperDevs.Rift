@@ -1,5 +1,3 @@
-using CommunityToolkit.Mvvm.ComponentModel;
-
 namespace CopperDevs.Rift.Launcher.Data;
 
 public class ModData

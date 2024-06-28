@@ -5,7 +5,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RepoStuff", "RepoStuff", "{728C943D-ACD2-4A2C-99CB-D73D76A2E723}"
 	ProjectSection(SolutionItems) = preProject
 		ReadMe.md = ReadMe.md
-		CopperDevs.Rift.Launcher\RiftBuildLinks.txt = CopperDevs.Rift.Launcher\RiftBuildLinks.txt
+		CopperDevs.Rift.Launcher\Data\RiftBuildLinks.txt = CopperDevs.Rift.Launcher\Data\RiftBuildLinks.txt
 	EndProjectSection
 EndProject
 Global

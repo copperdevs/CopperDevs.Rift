@@ -1,5 +1,4 @@
 using System.IO;
-using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using CopperDevs.Core;
@@ -8,7 +7,7 @@ using CopperDevs.Rift.Launcher.Views.Pages;
 using CopperDevs.Rift.Launcher.Views.Windows;
 using Wpf.Ui.Controls;
 
-namespace CopperDevs.Rift.Launcher;
+namespace CopperDevs.Rift.Launcher.Managers;
 
 public static class GameInstancesData
 {

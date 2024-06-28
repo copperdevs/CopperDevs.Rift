@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using CopperDevs.Core;
+using CopperDevs.Rift.Launcher.Managers;
 using CopperDevs.Rift.Launcher.Views.Pages;
 using Wpf.Ui.Appearance;
 using Wpf.Ui.Controls;

@@ -2,6 +2,7 @@ using System.Windows;
 using System.Windows.Controls;
 using CopperDevs.Core;
 using CopperDevs.Rift.Launcher.Data;
+using CopperDevs.Rift.Launcher.Managers;
 using CopperDevs.Rift.Launcher.Utility;
 
 namespace CopperDevs.Rift.Launcher.Views.Pages;

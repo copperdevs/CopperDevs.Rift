@@ -1,12 +1,11 @@
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
-using System.Net.Http;
 using CopperDevs.Core;
 using CopperDevs.Rift.Launcher.Data;
 using CopperDevs.Rift.Launcher.Utility;
 
-namespace CopperDevs.Rift.Launcher;
+namespace CopperDevs.Rift.Launcher.Managers;
 
 public static class GameDownloadManager
 {
@@ -116,7 +115,7 @@ public static class GameDownloadManager
             () => Log.Success($"Finished downloading build {path}"));
 
         ZipFile.ExtractToDirectory($"{GameBuildsDirectory}/Temporary/temp.zip", $"{GameBuildsDirectory}/{path}");
-        
+
         File.Delete($"{GameBuildsDirectory}/Temporary/temp.zip");
     }
 
