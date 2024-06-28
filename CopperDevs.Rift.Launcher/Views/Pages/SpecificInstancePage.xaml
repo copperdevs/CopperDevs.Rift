@@ -91,7 +91,7 @@
                 MinWidth="200"
                 HorizontalAlignment="Left"
                 SelectedIndex="0"
-                Name="VersionComboBox">
+                Name="VersionComboBox" SelectionChanged="VersionComboBox_OnSelectionChanged">
             </ComboBox>
         </StackPanel>
     </Grid>

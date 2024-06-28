@@ -8,7 +8,8 @@
 ## Rift Launcher
 
 ### To Do
-- [ ] Creating Instances
+- [X] Creating Instances
+- [ ] Downloading game versions
 - [ ] Modpacks
 - [ ] Bepinex
 - [ ] Steam Manifest

@@ -18,8 +18,7 @@ public partial class MainWindow : FluentWindow
         InitializeComponent();
         ApplicationThemeManager.Apply(this);
         
-        GameInstancesData.LoadInstancesData();
-        GameInstancesData.LoadInstancesUi(ref RootNavigation);
+        GameInstancesData.LoadInstances(RootNavigation);
     }
 
     private void RootNavigation_OnSelectionChanged(NavigationView sender, RoutedEventArgs args)

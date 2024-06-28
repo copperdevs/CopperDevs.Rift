@@ -8,6 +8,7 @@ namespace CopperDevs.Rift.Launcher.Views.Pages;
 
 public partial class NewInstancePage : Page
 {
+    private readonly object defaultVersionValue;
     public NewInstancePage()
     {
         InitializeComponent();
@@ -16,12 +17,15 @@ public partial class NewInstancePage : Page
         {
             VersionComboBox.Items.Add(new ComboBoxItem { Content = version.ToName() });
         }
+
+        defaultVersionValue = VersionComboBox.Items[0]!;
     }
 
     private void CreateInstanceButton_OnClick(object sender, RoutedEventArgs e)
     {
-        Log.Info(InstanceNameTextBox.Text);
+        GameInstancesData.CreateInstance(InstanceNameTextBox.Text, Enum.GetValues<RiftVersion>()[VersionComboBox.Items.IndexOf(((ComboBoxItem)VersionComboBox.SelectedItem))]);
 
-        Log.Info(Enum.GetValues<RiftVersion>()[VersionComboBox.Items.IndexOf(((ComboBoxItem)VersionComboBox.SelectedItem))]);
+        InstanceNameTextBox.Text = "";
+        VersionComboBox.SelectedItem = defaultVersionValue;
     }
 }
