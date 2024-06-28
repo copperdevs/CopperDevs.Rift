@@ -116,6 +116,8 @@ public static class GameDownloadManager
             () => Log.Success($"Finished downloading build {path}"));
 
         ZipFile.ExtractToDirectory($"{GameBuildsDirectory}/Temporary/temp.zip", $"{GameBuildsDirectory}/{path}");
+        
+        File.Delete($"{GameBuildsDirectory}/Temporary/temp.zip");
     }
 
     public static void SetDownloadUrls()
