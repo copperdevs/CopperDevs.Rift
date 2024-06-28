@@ -39,7 +39,7 @@ public partial class AllInstancesPage : Page
 
                     NavigationService.Navigate(newPage);
                     newPage.SetData(instance);
-                    
+
                     rootNavigation?.Navigate(tag);
                     SpecificInstancePage.Instance?.SetData(instance);
                 }
@@ -48,7 +48,7 @@ public partial class AllInstancesPage : Page
                     Log.Exception(e);
                 }
             };
-            
+
             var seperator = new Separator
             {
                 Opacity = 0,

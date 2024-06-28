@@ -121,7 +121,7 @@ public static class GameDownloadManager
 
     public static void SetDownloadUrls()
     {
-        var rawText = ResourceLoader.LoadTextResource("CopperDevs.Rift.Launcher.RiftBuildLinks.txt");
+        var rawText = ResourceLoader.LoadTextResource("CopperDevs.Rift.Launcher.Data.RiftBuildLinks.txt");
         var lines = rawText.Split("|");
 
         buildV010DownloadUrl = lines[0];

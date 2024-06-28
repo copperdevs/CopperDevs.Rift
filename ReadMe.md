@@ -13,6 +13,9 @@
 - [X] Creating Instances
 - [X] Downloading game versions
 - [ ] Change Ui to reflect current download state (Not downloaded, currently downloading, downloaded)
+- [ ] Version Checking
+- [ ] Installer
+- [ ] Launcher updating
 - [ ] Modpacks
 - [ ] Bepinex
 - [ ] Steam Manifest
@@ -20,3 +23,4 @@
 ### To Fix
 
 - [ ] Fix [AllInstancesPage](CopperDevs.Rift.Launcher/Views/Pages/AllInstancesPage.xaml) to better change pages
+- [ ] Instance info isn't set sometimes in [SpecificInstancePage](CopperDevs.Rift.Launcher/Views/Pages/SpecificInstancePage.xaml)
