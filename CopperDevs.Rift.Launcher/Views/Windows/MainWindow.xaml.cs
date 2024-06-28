@@ -17,8 +17,9 @@ public partial class MainWindow : FluentWindow
 
         InitializeComponent();
         ApplicationThemeManager.Apply(this);
-        
+
         GameInstancesData.LoadInstances(RootNavigation);
+        GameDownloadManager.SetDownloadUrls();
     }
 
     private void RootNavigation_OnSelectionChanged(NavigationView sender, RoutedEventArgs args)

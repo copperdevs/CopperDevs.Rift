@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CopperDevs.Core;
 using CopperDevs.Rift.Launcher.Data;
 using CopperDevs.Rift.Launcher.Utility;
 
@@ -35,6 +31,7 @@ public partial class SpecificInstancePage : Page
 
     private void PlayButton_OnClick(object sender, RoutedEventArgs args)
     {
+        GameDownloadManager.RunBuild(Enum.GetValues<RiftVersion>()[VersionComboBox.Items.IndexOf(VersionComboBox.SelectedItem)]);
     }
 
     private void FolderButton_OnClick(object sender, RoutedEventArgs args)
@@ -57,7 +54,7 @@ public partial class SpecificInstancePage : Page
     {
         if (currentData is null)
             return;
-        
+
         currentData.RiftVersion = Enum.GetValues<RiftVersion>()[VersionComboBox.Items.IndexOf(e.AddedItems[0]!)];
         currentData.SaveToFile();
     }

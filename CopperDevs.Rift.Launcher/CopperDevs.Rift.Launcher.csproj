@@ -43,4 +43,9 @@
       </Page>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="RiftBuildLinks.txt" />
+      <EmbeddedResource Include="RiftBuildLinks.txt" />
+    </ItemGroup>
+
 </Project>
