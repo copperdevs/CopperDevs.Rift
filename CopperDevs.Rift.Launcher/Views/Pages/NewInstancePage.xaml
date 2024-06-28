@@ -1,0 +1,34 @@
+<Page x:Class="CopperDevs.Rift.Launcher.Views.Pages.NewInstancePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+      xmlns:tray="http://schemas.lepo.co/wpfui/2022/xaml/tray"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:pages="clr-namespace:CopperDevs.Rift.Launcher.Views.Pages"
+      xmlns:windows="clr-namespace:CopperDevs.Rift.Launcher.Views.Windows"
+      Title="NewInstancePage"
+      ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+      ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+      Foreground="{DynamicResource TextFillColorPrimaryBrush}">
+
+    <StackPanel Margin="42">
+        <StackPanel Orientation="Vertical">
+            
+            <ui:TextBox
+                PlaceholderText="Instance Name..."
+                Name="InstanceNameTextBox"/>
+            
+            <Separator Opacity="0" Height="5" />
+            
+            <ComboBox
+                MinWidth="200"
+                HorizontalAlignment="Stretch"
+                SelectedIndex="0"
+                Name="VersionComboBox"/>
+            
+            <Separator Opacity="0" Height="5" />
+            <ui:Button Click="CreateInstanceButton_OnClick" HorizontalAlignment="Stretch" Content="Create" />
+        </StackPanel>
+    </StackPanel>
+</Page>

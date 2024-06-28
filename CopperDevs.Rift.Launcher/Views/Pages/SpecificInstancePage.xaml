@@ -42,8 +42,8 @@
 
         <Separator Grid.Row="0" Grid.Column="1" Opacity="0" Width="10" />
 
-        <StackPanel Name="ModsStackPanel" Grid.Row="0" Grid.Column="2" Margin="0" Visibility="Collapsed">
-            <!-- loaded mods go here when i add modding support -->
+        <StackPanel Name="ModsStackPanel" Grid.Row="0" Grid.Column="2" Margin="0" Visibility="Visible">
+            <!-- loaded mods go here when i add modding support. for now its just temporary stuff to fill the space -->
             <ui:Button HorizontalAlignment="Stretch" Content="Item" Height="65" />
             <Separator Opacity="0" Height="5" />
             <ui:Button HorizontalAlignment="Stretch" Content="Item" Height="65" />
@@ -84,6 +84,15 @@
             <Separator Opacity="0" Height="5" />
             <ui:Button HorizontalAlignment="Stretch" Content="Item" Height="65" />
             <Separator Opacity="0" Height="5" />
+        </StackPanel>
+
+        <StackPanel Name="SettingsStackPanel" Grid.Row="0" Grid.Column="2" Margin="0" Visibility="Collapsed">
+            <ComboBox
+                MinWidth="200"
+                HorizontalAlignment="Left"
+                SelectedIndex="0"
+                Name="VersionComboBox">
+            </ComboBox>
         </StackPanel>
     </Grid>
 

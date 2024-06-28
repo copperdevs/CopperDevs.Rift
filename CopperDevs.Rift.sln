@@ -2,6 +2,11 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopperDevs.Rift.Launcher", "CopperDevs.Rift.Launcher\CopperDevs.Rift.Launcher.csproj", "{39A22931-577F-4AEC-B900-226E2E07EA5F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RepoStuff", "RepoStuff", "{728C943D-ACD2-4A2C-99CB-D73D76A2E723}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

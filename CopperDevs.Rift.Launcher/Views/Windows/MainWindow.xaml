@@ -21,11 +21,10 @@
                  WindowCornerPreference="Round"
                  WindowStartupLocation="CenterScreen"
                  mc:Ignorable="d">
-    <Grid>
 
+    <Grid>
         <ui:NavigationView x:Name="RootNavigation"
                            SelectionChanged="RootNavigation_OnSelectionChanged"
-                           
                            Padding="42,0,42,0"
                            EnableDebugMessages="True"
                            FrameMargin="0"
@@ -61,19 +60,20 @@
                         <ui:SymbolIcon Symbol="Search24" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
-                
+
             </ui:NavigationView.MenuItems>
 
             <ui:NavigationView.FooterMenuItems>
-                
+
                 <ui:NavigationViewItem
                     Content="New Instance"
-                    NavigationCacheMode="Enabled">
+                    NavigationCacheMode="Enabled"
+                    TargetPageType="{x:Type pages:NewInstancePage}">
                     <ui:NavigationViewItem.Icon>
                         <ui:SymbolIcon Symbol="Add24" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
-                
+
                 <ui:NavigationViewItem
                     Content="Settings"
                     NavigationCacheMode="Enabled"
@@ -82,10 +82,10 @@
                         <ui:SymbolIcon Symbol="Settings24" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
-                
+
             </ui:NavigationView.FooterMenuItems>
         </ui:NavigationView>
-        
+
         <ui:TitleBar
             x:Name="TitleBar"
             Title="Rift Launcher"
