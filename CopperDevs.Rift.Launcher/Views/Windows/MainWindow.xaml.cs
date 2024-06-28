@@ -11,8 +11,6 @@ namespace CopperDevs.Rift.Launcher.Views.Windows;
 /// </summary>
 public partial class MainWindow : FluentWindow
 {
-    private readonly List<object> childObjects;
-
     public MainWindow()
     {
         CopperLogger.IncludeTimestamps = true;
@@ -20,23 +18,12 @@ public partial class MainWindow : FluentWindow
         InitializeComponent();
         ApplicationThemeManager.Apply(this);
         
-        childObjects = new List<object>();
-        
-        for (var i = 0; i < 10; i++)
-        {
-            var createdItem = new NavigationViewItem($"Instance {i}", SymbolRegular.Games24, typeof(SpecificInstancePage))
-            {
-                NavigationCacheMode = NavigationCacheMode.Enabled,
-                Tag = $"Instance {i}"
-            };
-            childObjects.Add(createdItem);
-        }
-
-        RootNavigation.MenuItems.Add(new NavigationViewItem("Instances", SymbolRegular.Folder24, typeof(AllInstancesPage), childObjects));
+        GameInstancesData.LoadInstancesData();
+        GameInstancesData.LoadInstancesUi(ref RootNavigation);
     }
 
     private void RootNavigation_OnSelectionChanged(NavigationView sender, RoutedEventArgs args)
     {
-        Log.Info($"selection {sender.SelectedItem} | index {childObjects.IndexOf(sender.SelectedItem!)}");
+        GameInstancesData.NavigationViewItemClicked((NavigationViewItem)sender.SelectedItem!);
     }
 }
