@@ -9,7 +9,7 @@ using Wpf.Ui.Controls;
 
 namespace CopperDevs.Rift.Launcher.Managers;
 
-public static class GameInstancesData
+public static class InstancesData
 {
     internal const string InstancesPath = "Instances";
 

@@ -19,12 +19,13 @@ public partial class MainWindow : FluentWindow
         InitializeComponent();
         ApplicationThemeManager.Apply(this);
 
-        GameInstancesData.LoadInstances(RootNavigation);
-        GameDownloadManager.SetDownloadUrls();
+        InstancesData.LoadInstances(RootNavigation);
+        DownloadManager.SetDownloadUrls();
+        ModLoaderManager.SetDownloadUrl();
     }
 
     private void RootNavigation_OnSelectionChanged(NavigationView sender, RoutedEventArgs args)
     {
-        GameInstancesData.NavigationViewItemClicked((NavigationViewItem)sender.SelectedItem!);
+        InstancesData.NavigationViewItemClicked((NavigationViewItem)sender.SelectedItem!);
     }
 }

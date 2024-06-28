@@ -13,7 +13,7 @@ public partial class AllInstancesPage : Page
     {
         InitializeComponent();
 
-        foreach (var instance in GameInstancesData.GetAllInstances())
+        foreach (var instance in InstancesData.GetAllInstances())
         {
             var button = new Button
             {
@@ -25,8 +25,8 @@ public partial class AllInstancesPage : Page
             // TODO: Make this work better bruh
             button.Click += (sender, args) =>
             {
-                var instances = GameInstancesData.GetAllInstances();
-                var uiInstances = GameInstancesData.GetAllInstancesUi();
+                var instances = InstancesData.GetAllInstances();
+                var uiInstances = InstancesData.GetAllInstancesUi();
                 var rootNavigation = ((MainWindow)Application.Current.MainWindow!).RootNavigation;
 
                 var tag = uiInstances[instances.IndexOf(instance)].Tag.ToString();

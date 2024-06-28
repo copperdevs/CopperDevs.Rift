@@ -16,9 +16,9 @@ public class CreatedInstanceData
         return JsonSerializer.Deserialize<CreatedInstanceData>(json);
     }
 
-    public void SaveToFile(string path = GameInstancesData.InstancesPath)
+    public void SaveToFile(string path = InstancesData.InstancesPath)
     {
-        Directory.CreateDirectory(GameInstancesData.InstancesPath);
+        Directory.CreateDirectory(InstancesData.InstancesPath);
 
         if (string.IsNullOrEmpty(FileName))
             FileName = Guid.NewGuid().ToString();

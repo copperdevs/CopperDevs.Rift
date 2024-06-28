@@ -48,6 +48,8 @@
 
     <ItemGroup>
       <EmbeddedResource Include="Data\RiftBuildLinks.txt" />
+      <None Remove="Data\BepInExLink.txt" />
+      <EmbeddedResource Include="Data\BepInExLink.txt" />
     </ItemGroup>
 
 </Project>

@@ -24,7 +24,7 @@ public partial class NewInstancePage : Page
 
     private void CreateInstanceButton_OnClick(object sender, RoutedEventArgs e)
     {
-        GameInstancesData.CreateInstance(InstanceNameTextBox.Text, Enum.GetValues<RiftVersion>()[VersionComboBox.Items.IndexOf(((ComboBoxItem)VersionComboBox.SelectedItem))]);
+        InstancesData.CreateInstance(InstanceNameTextBox.Text, Enum.GetValues<RiftVersion>()[VersionComboBox.Items.IndexOf(((ComboBoxItem)VersionComboBox.SelectedItem))]);
 
         InstanceNameTextBox.Text = "";
         VersionComboBox.SelectedItem = defaultVersionValue;

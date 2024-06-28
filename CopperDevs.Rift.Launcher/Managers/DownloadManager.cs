@@ -7,7 +7,7 @@ using CopperDevs.Rift.Launcher.Utility;
 
 namespace CopperDevs.Rift.Launcher.Managers;
 
-public static class GameDownloadManager
+public static class DownloadManager
 {
     private const ulong MainAppId = 2629710;
     private const ulong PlaytestAppId = 2880040;
@@ -111,15 +111,17 @@ public static class GameDownloadManager
             Directory.CreateDirectory($"{GameBuildsDirectory}/Temporary/");
 
         await Util.DownloadFileWithProgressAsync(url, $"{GameBuildsDirectory}/Temporary/temp.zip",
-            progress => Log.Network($"Download progress: {progress}%"),
+            null!,
             () => Log.Success($"Finished downloading build {path}"));
 
         ZipFile.ExtractToDirectory($"{GameBuildsDirectory}/Temporary/temp.zip", $"{GameBuildsDirectory}/{path}");
 
         File.Delete($"{GameBuildsDirectory}/Temporary/temp.zip");
+        
+        ModLoaderManager.CopyToDirectory($"{GameBuildsDirectory}/{path}");
     }
 
-    public static void SetDownloadUrls()
+    internal static void SetDownloadUrls()
     {
         var rawText = ResourceLoader.LoadTextResource("CopperDevs.Rift.Launcher.Data.RiftBuildLinks.txt");
         var lines = rawText.Split("|");

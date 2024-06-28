@@ -32,7 +32,7 @@ public partial class SpecificInstancePage : Page
 
     private void PlayButton_OnClick(object sender, RoutedEventArgs args)
     {
-        GameDownloadManager.RunBuild(Enum.GetValues<RiftVersion>()[VersionComboBox.Items.IndexOf(VersionComboBox.SelectedItem)]);
+        DownloadManager.RunBuild(Enum.GetValues<RiftVersion>()[VersionComboBox.Items.IndexOf(VersionComboBox.SelectedItem)]);
     }
 
     private void FolderButton_OnClick(object sender, RoutedEventArgs args)
