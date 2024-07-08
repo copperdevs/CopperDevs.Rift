@@ -4,7 +4,7 @@
 
 ## Current Projects
 
-- Rift Launcher
+- Rift Launcher - Probably on hold till a proper mod hosting api pops up
 
 ## Rift Launcher
 
