@@ -17,6 +17,7 @@ public partial class SpecificInstancePage : Page
         Instance = this;
         InitializeComponent();
         // return;
+
         foreach (var version in Enum.GetValues<RiftVersion>())
         {
             VersionComboBox.Items.Add(new ComboBoxItem { Content = version.ToName() });

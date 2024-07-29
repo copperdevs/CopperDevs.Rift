@@ -1,14 +1,8 @@
-# Copper's Rift Stuff
+# Copper's Rift Launcher
 
-> Collection of stuff related to the indie fps game [Rift](https://store.steampowered.com/app/2629710/Rift_Genesis/)
+> Modded game launcher for the indie fps game [Rift](https://store.steampowered.com/app/2629710/Rift_Genesis/)
 
-## Current Projects
-
-- Rift Launcher - Probably on hold till a proper mod hosting api pops up
-
-## Rift Launcher
-
-### To Do
+## To Do
 
 - [X] Creating Instances
 - [X] Downloading game versions
@@ -20,7 +14,8 @@
 - [ ] Bepinex
 - [ ] Steam Manifest
 
-### To Fix
+## To Fix
 
 - [ ] Fix [AllInstancesPage](CopperDevs.Rift.Launcher/Views/Pages/AllInstancesPage.xaml) to better change pages
-- [ ] Instance info isn't set sometimes in [SpecificInstancePage](CopperDevs.Rift.Launcher/Views/Pages/SpecificInstancePage.xaml)
+- [ ] Instance info isn't set sometimes
+  in [SpecificInstancePage](CopperDevs.Rift.Launcher/Views/Pages/SpecificInstancePage.xaml)
